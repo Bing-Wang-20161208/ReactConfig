@@ -9,5 +9,7 @@ npm i less less-loader -D <br />
 配置less及antd <br />
 npm i antd -S <br />
 npm i babel-plugin-import -D <br />
-配置装饰器模式写法
+配置装饰器模式写法 <br />
 npm i @babel/plugin-proposal-decorators -D <br />
+配置 <br />
+npm i react-router-dom -S <br />
