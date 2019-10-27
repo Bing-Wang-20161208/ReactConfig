@@ -1,8 +1,11 @@
 # ReactConfig
-临时使用
-生成一个reactApp
+临时使用 <br />
+生成一个reactApp <br />
 npx create-react-app app-name <br />
 配置rewired <br />
-npm react-app-rewired customize-cra -D <br />
+npm i react-app-rewired customize-cra -D <br />
 配置less <br />
-npm less less-loader -D <br />
+npm i less less-loader -D <br />
+配置less及antd <br />
+npm i antd -S <br />
+npm i babel-plugin-import -D <br />
