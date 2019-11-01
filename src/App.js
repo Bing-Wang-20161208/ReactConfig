@@ -1,30 +1,20 @@
 import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { adminRouter } from './routes';
+import { Frame } from './components';
 
-// const testHOC = (WrappedComponent) => {
-//   return class HOCComponent extends React.Component {
-//     render () {
-//       return (
-//         <>
-//           <WrappedComponent />
-//           <div>这是高阶组件里的信息</div>
-//         </>
-//       )
-//     }
-//   }
-// }
-// @testHOC
+const menu = adminRouter.filter(route => route.isNav === true);
+
 class App extends React.Component {
   render () {
     return (
-      <div>
-        {/* <Button type = 'primary'>test</Button> */}
+      <Frame menu = {menu}>
         <Switch>
           {
             adminRouter.map(route => {
               return (
                 <Route
+                  key = {route.pathname}
                   path = {route.pathname}
                   exact = {route.exact}
                   render = {(routeProps) => {
@@ -37,7 +27,7 @@ class App extends React.Component {
           <Redirect to = {adminRouter[0].pathname} from = "/admin" exact />
           <Redirect to = "/404" />
         </Switch>
-      </div>
+      </Frame>
     )
   }
 }
