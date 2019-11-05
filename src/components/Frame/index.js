@@ -8,7 +8,7 @@ const { Header, Content, Sider } = Layout;
 @withRouter
 class Frame extends Component {
     handleMenuClick = ({key}) => {
-        this.props.history.push(key);
+        this.props.history.push(key);   //这里需要用到装饰器模式@withRouter，才可以使用react-route的history属性
     }
     render() {
         return (
@@ -42,9 +42,7 @@ class Frame extends Component {
                         <Content
                         style={{
                             background: '#fff',
-                            padding: 24,
-                            margin: 0,
-                            minHeight: 280,
+                            margin: 0
                         }}
                         >
                             {this.props.children}
